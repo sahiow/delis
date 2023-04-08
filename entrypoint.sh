@@ -10,7 +10,7 @@ wget -N https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download
 chmod a+x xray && mv xray $xpid
 sed -i "s/uuid/$uuid/g" ./config.json
 sed -i "s/uuid/$uuid/g" /etc/nginx/nginx.conf
-[ -n "${www}" ] && rm -rf /usr/share/nginx/* && wget -c -P /usr/share/nginx "https://github.com/yonggekkk/doprax-xray/raw/main/3w/html${www}.zip" && unzip -o "/usr/share/nginx/html${www}.zip" -d /usr/share/nginx/html
+[ -n "${www}" ] && rm -rf /usr/share/nginx/* && wget -c -P /usr/share/nginx "https://github.com/sahiow/delis/raw/main/3w/html${www}.zip" && unzip -o "/usr/share/nginx/html${www}.zip" -d /usr/share/nginx/html
 cat config.json | base64 > config
 rm -f config.json
 
